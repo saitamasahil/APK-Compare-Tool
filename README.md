@@ -6,7 +6,7 @@ APK Compare Tool is a bash script that allows developers to compare two APK file
 > The APK Compare Tool is a useful tool for developers who want to compare APK files and identify differences in resources and smali code. It is easy to use, flexible, and provides color-coded output for quick identification of changes.
 
 ### Key Points
-- The script is designed to compare any two APK files, including comparision between original and modified versions or older and newer versions.
+- The script is designed to compare any two APK files, including comparison between original and modified versions or older and newer versions.
 - Users can select which changes they want to compare, including resources, smali, or everything in the APK.
 - The APK Compare Tool provides detailed comparison results, including the identification of files that are different, along with the line numbers where changes have occurred. Additionally, the tool shows what has been removed or added.
 - The output is displayed with color-coded differences to make it easy for developers to identify changes quickly.
@@ -23,7 +23,7 @@ git clone https://github.com/saitamasahil/APK-Compare-Tool.git
 ```sh
 cd APK-Compare-Tool
 ```
-- Keep your both apk files in **APK-Compare-Tool** folder.
+- Keep your both apk files(which you want to compare) in **APK-Compare-Tool** folder.
 - Now run the script:
 ```sh
 bash compare.sh <name_of_first_apk> <name_of_second_apk>
