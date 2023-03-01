@@ -12,7 +12,7 @@ APK Compare Tool is a bash script that allows developers to compare two APK file
 - The output is displayed with color-coded differences to make it easy for developers to identify changes quickly.
 
 ### Prerequisites
-- To use the APK Compare Tool, users will need to install `Apktool` and `diff tool`. Make sure you have both of these tools in your system.
+- To use the APK Compare Tool, users will need to install `Apktool` and `diff tool`. Make sure you have both of these tools in your system. Installing difftool on a Linux-based operating system is straightforward as it usually comes pre-installed. However, you'll need to install Apktool manually. If you're using Termux(F-Droid) then you can [clone this repository](https://github.com/rendiix/termux-apktool) & install apktool manually.
 
 ### Usage
 - Clone the repo using git.
