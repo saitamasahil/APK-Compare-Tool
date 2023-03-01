@@ -29,6 +29,11 @@ cd APK-Compare-Tool
 bash compare.sh <name_of_first_apk> <name_of_second_apk>
 ```
 > Note: Although the APK file names can be anything, it is recommended to use `original.apk` as the first APK and `modified.apk` as the second one when comparing original and modified versions. This makes it easier to identify changes, as the modified changes will be displayed in green color. Example of such input script can be: `bash compare.sh original.apk modified.apk`.
+- If your current environment is other than bash then use following commands:
+```sh
+chmod +x compare.sh
+./compare.sh <name_of_first_apk> <name_of_second_apk>
+```
 
 ### Screenshots
 ![Screenshot1](screenshots/screenshot1.png)
