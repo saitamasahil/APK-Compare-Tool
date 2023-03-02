@@ -38,9 +38,17 @@ chmod +x compare.sh
 ```
 
 ### Screenshots
-![Screenshot1](screenshots/screenshot1.png)
-![Screenshot2](screenshots/screenshot2.png)
-![Screenshot3](screenshots/screenshot3.png)
-![Screenshot4](screenshots/screenshot4.png)
+<div align="center">
+    <img src="screenshots/screenshot1.png">
+</div>
+<div align="center">
+    <img src="screenshots/screenshot2.png">
+</div>
+<div align="center">
+    <img src="screenshots/screenshot3.png">
+</div>
+<div align="center">
+    <img src="screenshots/screenshot4.png">
+</div>
 
 **Brought to you by [saitamasahil](https://github.com/saitamasahil)!**
