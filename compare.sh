@@ -29,31 +29,32 @@ if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
             if [ -z "$output" ]; then
                 echo -e "\033[38;5;208mNo changes were found in resources.\033[0m"
             else
-                echo "$output"
+                echo "$output" | tee resources_changes_$log_file
+                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
             fi
         elif [ $choice -eq 2 ]; then
             output=$(diff --color=always -r first_apk/smali second_apk/smali)
             if [ -z "$output" ]; then
                 echo -e "\033[38;5;208mNo changes were found in smali.\033[0m"
             else
-                echo "$output"
+                echo "$output" | tee smali_changes_$log_file
+                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
             fi
         elif [ $choice -eq 3 ]; then
             output=$(diff --color=always -r first_apk second_apk)
             if [ -z "$output" ]; then
                 echo -e "\033[38;5;208mNo changes were found.\033[0m"
             else
-                echo "$output"
+                echo "$output" | tee every_changes_$log_file
+                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
             fi
         else
             echo "Invalid input."
         fi
 
-        # Write the output to the log file
-        echo "$output" > "$log_file"
-
         # Delete the decoded folders
         rm -rf first_apk second_apk
+
     else
         # Echo a message if one or both tools are not available
         echo -e "\033[31;1mApktool or diff tool not found. Please make sure you have both tools in your system.\033[0m"
