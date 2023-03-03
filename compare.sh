@@ -30,7 +30,7 @@ if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
                 echo -e "\033[38;5;208mNo changes were found in resources.\033[0m"
             else
                 echo "$output" | tee resources_changes_$log_file
-                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
+                echo -e "\033[38;5;208mLogs of the comparison result have been saved!\033[0m"
             fi
         elif [ $choice -eq 2 ]; then
             output=$(diff --color=always -r first_apk/smali second_apk/smali)
@@ -38,7 +38,7 @@ if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
                 echo -e "\033[38;5;208mNo changes were found in smali.\033[0m"
             else
                 echo "$output" | tee smali_changes_$log_file
-                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
+                echo -e "\033[38;5;208mLogs of the comparison result have been saved!\033[0m"
             fi
         elif [ $choice -eq 3 ]; then
             output=$(diff --color=always -r first_apk second_apk)
@@ -46,7 +46,7 @@ if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
                 echo -e "\033[38;5;208mNo changes were found.\033[0m"
             else
                 echo "$output" | tee every_changes_$log_file
-                echo -e "\033[38;5;208mLogs have been saved!!\033[0m"
+                echo -e "\033[38;5;208mLogs of the comparison result have been saved!\033[0m"
             fi
         else
             echo "Invalid input."
