@@ -5,7 +5,7 @@ first_apk="$1"
 second_apk="$2"
 
 # Set the name and path of the log file with a timestamp
-log_file="apk_diff_$(date +%Y-%m-%d_%H-%M-%S).log"
+log_file="$(date +%Y-%m-%d_%H-%M-%S).log"
 
 # Check if both files exist
 if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
