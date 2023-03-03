@@ -4,6 +4,9 @@
 first_apk="$1"
 second_apk="$2"
 
+# Set the name and path of the log file with a timestamp
+log_file="apk_diff_$(date +%Y-%m-%d_%H-%M-%S).log"
+
 # Check if both files exist
 if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
     # Check if apktool and diff tool are available
@@ -45,6 +48,9 @@ if [ -f "$first_apk" ] && [ -f "$second_apk" ]; then
         else
             echo "Invalid input."
         fi
+
+        # Write the output to the log file
+        echo "$output" > "$log_file"
 
         # Delete the decoded folders
         rm -rf first_apk second_apk
