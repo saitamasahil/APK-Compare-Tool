@@ -43,7 +43,7 @@ chmod +x compare.sh
 The APK Compare Tool automatically saves logs of the comparison results whenever an APK comparison is performed. To view the logs in color-coded differences follow these instructions.
 
 #### Terminal
-To read saved logs in Terminal type `cat <name_of_log_file>`.
+To read saved logs in Terminal, Type `cat <name_of_log_file>`.
 
 #### VS Code
 To read saved logs in VS Code, [Download this extension](https://marketplace.visualstudio.com/items?itemName=iliazeus.vscode-ansi). Now open log file in VS Code, Press `Ctrl+Shift+P` to access **Command Palette**. Search **ANSI** in Command Palette. Select `ANSI Text: Open Preview`. This will open a preview page where you will be able to see changes in color-coded differences.
@@ -60,6 +60,9 @@ To read saved logs in VS Code, [Download this extension](https://marketplace.vis
 </div>
 <div align="center">
     <img src="screenshots/screenshot4.png">
+</div>
+<div align="center">
+    <img src="screenshots/screenshot5.png">
 </div>
 
 **Brought to you by [saitamasahil](https://github.com/saitamasahil)!**
