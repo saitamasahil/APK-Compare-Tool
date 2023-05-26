@@ -29,15 +29,10 @@ cd APK-Compare-Tool
 - Keep your both apk files(which you want to compare) in **APK-Compare-Tool** folder.
 - Now run the script:
 ```sh
-bash compare.sh <name_of_first_apk> <name_of_second_apk>
+chmod +x compare.sh && ./compare.sh
 ```
-- Running above script will show all changes in Terminal. It will also save logs of the comparison results so you can view changes anytime.
-> Note: Although the APK file names can be anything, it is recommended to use `original.apk` as the first APK and `modified.apk` as the second one when comparing original and modified versions. This makes it easier to identify changes, as the modified changes will be displayed in green color. Example of such input script can be: `bash compare.sh original.apk modified.apk`.
-- If your current environment is other than bash then use following commands:
-```sh
-chmod +x compare.sh
-./compare.sh <name_of_first_apk> <name_of_second_apk>
-```
+- Now select first & second apk from the list shown in terminal.
+- Now you can compare both apks.
 
 ### Read Saved Logs
 The APK Compare Tool automatically saves logs of the comparison results whenever an APK comparison is performed. To view the logs in color-coded differences follow these instructions.
@@ -50,19 +45,22 @@ To read saved logs in VS Code, [Download this extension](https://marketplace.vis
 
 ### Screenshots
 <div align="center">
-    <img src="screenshots/screenshot1.png">
+    <img src="screenshots/s1.jpeg">
 </div>
 <div align="center">
-    <img src="screenshots/screenshot2.png">
+    <img src="screenshots/s2.jpeg">
 </div>
 <div align="center">
-    <img src="screenshots/screenshot3.png">
+    <img src="screenshots/s3.jpeg">
 </div>
 <div align="center">
-    <img src="screenshots/screenshot4.png">
+    <img src="screenshots/s4.jpeg">
 </div>
 <div align="center">
-    <img src="screenshots/screenshot5.png">
+    <img src="screenshots/s5.jpeg">
+</div>
+<div align="center">
+    <img src="screenshots/s6.jpeg">
 </div>
 
 **Brought to you by [saitamasahil](https://github.com/saitamasahil)!**
