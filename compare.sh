@@ -22,6 +22,9 @@ echo ""
 first_apk="$1"
 second_apk="$2"
 
+# pwd variable
+dir=$(pwd)
+
 # Check if there are any apk files in the current directory
 if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and redirect the output to /dev/null
     # Ask the user to select the first apk file
@@ -73,6 +76,8 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
             echo "2. Smali"
             echo "3. Everything"
             read -p "Enter your choice: " choice
+            echo ""
+            echo -e "${PEACH}Here is the comparison result:${NC}"
 
             # Display only those changes based on user input
             if [ $choice -eq 1 ]; then
@@ -84,7 +89,8 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
                 else
                     echo "$output" | tee resources_changes_$log_file
                     echo ""
-                    echo -e "${GREEN}Logs of the comparison result have been saved!${NC}"
+                    echo -e "${GREEN}The comparison result's logs are saved. You can find them here:${NC}"
+                    echo "$dir"
                     echo ""
                 fi
             elif [ $choice -eq 2 ]; then
@@ -96,7 +102,8 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
                 else
                     echo "$output" | tee smali_changes_$log_file
                     echo ""
-                    echo -e "${GREEN}Logs of the comparison result have been saved!${NC}"
+                    echo -e "${GREEN}The comparison result's logs are saved. You can find them here:${NC}"
+                    echo "$dir"
                     echo ""
                 fi
             elif [ $choice -eq 3 ]; then
@@ -108,7 +115,8 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
                 else
                     echo "$output" | tee every_changes_$log_file
                     echo ""
-                    echo -e "${GREEN}Logs of the comparison result have been saved!${NC}"
+                    echo -e "${GREEN}The comparison result's logs are saved. You can find them here:${NC}"
+                    echo "$dir"
                     echo ""
                 fi
             else
@@ -130,6 +138,5 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
 else # This is the else block for the ls command above. It will execute if there are no apk files in the current directory.
     # Echo a message to inform the user to keep both apk files in the current directory.
     echo -e "${PEACH}No apk files found in the current directory. Please keep both apk files in directory:${NC}"
-    dir=$(pwd)
     echo "$dir"
 fi
