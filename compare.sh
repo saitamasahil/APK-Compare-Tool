@@ -31,6 +31,7 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
             echo ""
             echo -e "${normal_red}You selected: $first_apk${NC}"
             echo ""
+            sleep 2
             break
         else
             echo -e "${PEACH}Invalid selection!${NC}"
@@ -45,6 +46,7 @@ if ls *.apk >/dev/null 2>&1; then # This command will list all the apk files and
             echo ""
             echo -e "${normal_green}You selected: $second_apk${NC}"
             echo ""
+            sleep 2
             break
         else
             echo -e "${PEACH}Invalid selection!${NC}"
