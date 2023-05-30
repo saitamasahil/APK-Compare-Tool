@@ -34,7 +34,19 @@ echo "2. Compare Two jar Files"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
-    chmod +x apk.sh && ./apk.sh
+    chmod +x apk.sh
+    output=$(./apk.sh 2>&1)
+    if [[ $output == *"Permission denied"* ]]; then
+        bash apk.sh # Run it with bash instead
+    else
+        ./apk.sh
+    fi
 elif [ $choice -eq 2 ]; then
-    chmod +x jar.sh && ./jar.sh
+    chmod +x jar.sh
+    output=$(./jar.sh 2>&1)
+    if [[ $output == *"Permission denied"* ]]; then
+        bash jar.sh # Run it with bash instead
+    else
+        ./jar.sh
+    fi
 fi
