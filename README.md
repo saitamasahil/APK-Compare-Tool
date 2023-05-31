@@ -33,6 +33,7 @@ chmod +x compare.sh && ./compare.sh
 ```
 - Now select first & second apk from the list shown in terminal.
 - Now you can compare both apks.
+> Note: If your terminal gives "Permission denied" error then run the tool by typing `bash compare.sh`.
 
 ### Read Saved Logs
 The APK Compare Tool automatically saves logs of the comparison results whenever an APK comparison is performed. To view the logs in color-coded differences follow these instructions.
