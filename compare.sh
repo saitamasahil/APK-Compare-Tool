@@ -13,7 +13,7 @@ NC='\033[0m' # No Color
 # Check if user is using termux
 if [ -d "$PREFIX" ]; then
     # Check if tput is installed in Termux
-    if ! which tput >/dev/null; then
+    if ! dpkg -s ncurses-utils >/dev/null 2>&1; then
         # Install ncurses-utils if not installed
         pkg install ncurses-utils
     fi
